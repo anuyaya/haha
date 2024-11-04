@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            min-block-size: 100%;
+            display: grid;
+            place-content: center;
+            padding-block: 30dvh;
+            background: linear-gradient(to bottom right, #abf0ff, #65c3ff);
+        }
+        @keyframes slide-fade-in{
+            from{
+                opacity: 0;
+                box-shadow: none;
+                transform: scale(.8) translateY(15vh);
+            }
+        }
+        .cards{
+            display: grid;
+            gap: 2rem;
+            grid-auto-flow: dense;
+            grid-template-columns: repeat(4, 30ch);
+        }
+        .card{
+            animation: slide-fade-in both;
+            animation-timeline: view();
+            animation-range: contain 0% contain 50%;
+            border-radius: 10px;
+            line-height: 6;
+            box-shadow: 0px 8px 20px #00000022;
+            font-size: 32px;
+            letter-spacing: 5px;
+            color: #fff;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: linear-gradient(120deg,#c6f1d5,#87d8a2,#3f935c,#1c9d49);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card img{
+            width:100%;
+            height:100%;
+        }
+        .card:nth-of-type(4n){
+            grid-column: span 2;
+        }
+        .card:nth-of-type(5n){
+            grid-column: span 2;
+        }
+        .card:nth-of-type(7n){
+            grid-row: span 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="cards">
+        <div class="card"> <img src="./img/3.avif"></div>
+        <div class="card"> <img src="./img/3.avif"></div>
+        <div class="card"> <img src="./img/3.avif"></div>
+        <div class="card"> <img src="./img/2.webp"></div>
+        <div class="card"> <img src="./img/1.webp"></div>
+        <div class="card"> <img src="./img/3.avif"></div>
+        <div class="card"> <img src="./img/5.webp"></div>
+        <div class="card"> <img src="./img/4.webp"></div>
+        <div class="card"> <img src="./img/2.webp"></div>
+        <div class="card"> <img src="./img/3.webp"></div>
+        <div class="card"> <img src="./img/1.webp"></div>
+        <div class="card"> <img src="./img/8.webp"></div>
+        <div class="card"> <img src="./img/5.webp"></div>
+        <div class="card"> <img src="./img/10.webp"></div>
+        <div class="card"> <img src="./img/4.webp"></div>
+        <div class="card"> <img src="./img/9.webp"></div>
+        <div class="card"> <img src="./img/5.webp"></div>
+        <div class="card"> <img src="./img/1.webp"></div>
+        <div class="card"> <img src="./img/2.webp"></div>
+        <div class="card"> <img src="./img/2.avif"></div>
+        <div class="card"> <img src="./img/6.webp"></div>
+        <div class="card"> <img src="./img/1.avif"></div>
+        <div class="card"> <img src="./img/8.webp"></div>
+        <div class="card"> <img src="./img/7.webp"></div>
+        <div class="card"> <img src="./img/3.avif"></div>
+        <div class="card"> <img src="./img/8.webp"></div>
+        <div class="card"> <img src="./img/8.webp"></div>
+
+    </div>
+
+</body>
+</html>
